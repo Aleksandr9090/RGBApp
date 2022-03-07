@@ -24,32 +24,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         rGBView.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1.0)
-
         rGBView.layer.cornerRadius = 20
         super.viewDidLoad()
     }
     
     @IBAction func redSliderAction() {
         redLabel.text = String(round(redSlider.value * 100) / 100)
-        
         redColor =  CGFloat(redSlider.value)
         rGBView.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1.0)
     }
     @IBAction func greenSliderAction() {
         greenLabel.text = String(round(greenSlider.value * 100) / 100)
-        
         greenColor = CGFloat(greenSlider.value)
         rGBView.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1.0)
     }
     
     @IBAction func blueSliderAction() {
         blueLabel.text = String(round(blueSlider.value * 100) / 100)
-        
         blueColor = CGFloat(blueSlider.value)
         rGBView.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1.0)
     }
-    
-   
     
 }
 
